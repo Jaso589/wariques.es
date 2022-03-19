@@ -1,0 +1,631 @@
+:root{
+    --principal: #434343;
+    --complementary: #808080;
+    --white: #F9F9F9;
+    
+    --black: #3D4E54;
+    --orange: #E9672B;
+    --secondary: #B11F2D;
+    --yellow: #F2C94C;
+    --gray: #AEAEAE;
+    --font: sans-senrif;
+    --max-width:1200px;
+    --header-height:4rem;
+    --height-mobil:3.8rem;
+    --shadow: 0 -1px 5px #434343;
+}
+
+/********* Reset ************/
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    color:var(--black);
+    background: var(--white);
+}
+a{
+    color: var(--black);
+    transition: all 0.5s ease-out;
+}
+a:hover{
+    opacity: 0.75;
+}
+
+h1{
+    margin: 0;
+    font-size: 1.5rem;
+}
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+h5 {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  
+h6 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+img{
+    max-width: 100%;
+    height: auto;
+}
+li{
+    list-style: none;
+}
+p{
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+}
+/******* Componentes ************/
+.container{
+    display: flex;
+    flex-flow: row wrap ;
+}
+
+/******* Menu *********/
+
+
+/****** slide *******/
+
+
+/********* site styles ************/
+
+.header .navbar{
+    display: none;
+}
+
+.header .nav-mobil{
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: var(--height-mobil);
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: var(--shadow);
+
+}
+
+.header .nav-mobil div{
+    padding: 0;
+    margin: 0 10px;
+    text-align: right;
+    width: 40%;
+    
+}
+.nav-mobil div img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    padding: 3px;
+    
+}
+
+.header .menu-img{
+    padding: 5px;
+}
+.header .nav-mobil .logo-menu{
+    position: relative;
+    margin: 0 20px;
+}
+.slide-contenedor{
+    display: none;
+}
+/***menu********/
+
+.menu{
+    display: none;
+}
+.menu .tab-nav{
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height-mobil);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.tab-nav div{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.tab-nav div:nth-child(2){
+    background: #E0E0E0;
+}
+.menu .lista-menu{
+    position: relative;
+    width: 183px;
+    height: 290px;
+    top: 47px;
+
+}
+.lista-menu li{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 8px 0px;
+    font-size: 1.3rem;
+    width: 283px;
+}
+.menu .wsp{
+    width: 90vw;
+    height: 104px;
+    position: relative;
+    color: var(--white);
+    top: 47px;
+    left: 20px;
+    background: #000000;
+    border-radius: 14px;
+    display: flex;
+}
+.wsp img{
+    position: relative;
+    width: 43px;
+    height: 43px;
+    top: 1rem;
+    margin: 0 8px 0 16px;
+}
+.wsp .text-wsp{
+    position: relative;
+    width: 183.69px;
+
+}
+
+/*********** home ******/
+.home-mobil{
+    top: 90px;
+    position: absolute;
+    width: 363px;
+    height: 56px;
+    left: 24px;
+
+
+}
+.home-mobil h2{
+    /* movil/h2 */
+
+    font-family: 'Bree Peru';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+/* or 117% */
+/* black */
+    color:var(--black);
+}
+.home-mobil input{
+    position: absolute;
+    height: 52px;
+    width: 88vw;
+    left: 0;
+    right: 5.84%;
+    top: 72px;
+
+}
+.cupon{
+    position: absolute;
+    height: 121px;
+    left: 24px;
+    right: 5.84%;
+    top: 238px;
+    display: flex;
+    flex-direction: row;
+
+/* segundario */
+    background:var(--secondary);
+    border-radius: 14px;
+}
+.cupon img{
+width: 90px;
+height: 82px;
+margin: 16px 16px 23px 16px;
+
+}
+.cupon div{
+    position: absolute;
+    top: 12px;
+    left: 120px;
+    height: 96.02px;
+    line-height: 18px;
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    color: var(--white);
+    
+    font-weight: 700;
+}
+.cupon h3{
+    font-size: 16px;
+    line-height: 18px;
+}
+.cupon p{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.cupon a{
+    color: var(--white);
+    line-height: 20px;
+/* identical to box height, or 143% */
+
+    text-decoration-line: underline;
+
+}
+
+/*********** categorias *************/
+.categorias{
+    position: relative;
+    left: 0px;
+    top: 421px;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+}
+.categorias div{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 10px;
+    
+}
+.categorias div a{
+    width: 77.47px;
+    margin: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+.categorias div img{
+    position: relative;
+    width: 77.47px;
+    right: 1.54%;
+    top: 0%;
+    padding: 5px;
+    bottom: 26.44%;
+    background: #F2F2F2;
+    border-radius: 4px;
+}
+.cards{
+    position: absolute;
+    width: 363px;
+    height: 525px;
+    left: 24px;
+    top: 546px;
+    overflow-y: scroll;
+}
+@media (min-width: 576px) {
+    /******** categorias *********/
+/*
+.categorias{
+    display: flex;
+    position: relative;
+    top: 5%;
+    background: red;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}*/
+    
+}
+
+@media (min-width: 768px) {
+      /******** header ********/
+.header .nav-mobil{
+    display: none;
+}
+.header{
+    position:sticky;
+    box-shadow: var(--shadow);
+    height: 4.375rem;
+}
+.header .navbar{
+    display: flex;
+    flex-direction: row wrap;
+    width: 100%;
+}
+.header ul{
+    display: inherit;
+    width: 100%;
+    margin: 10px auto;
+}
+.header ul  a{
+    margin: auto;
+    flex: 0 1 150px;
+    text-decoration: none;
+    text-align: center;
+}
+.header ul  a img{
+    height: 30px;
+    object-fit: cover;
+}
+.header h2{
+    font-size: 1rem;
+}
+.header .navbar .nav-first a:nth-child(1){
+    color: var(--orange);
+}
+.header .logo{
+    padding: 0 5%;
+    position: relative;
+    margin: auto;
+    left: 20px;
+}
+/*****menu*************/
+.menu{
+    display: none;
+}
+/*********slide* *******/
+.banner-section{
+    height: 352px;
+}
+.slide-contenedor{
+    width: inherit;
+    top: 48px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* margin: auto; */
+}
+
+/* .miSlider{
+    display: none;
+    transition: 2s;
+    max-height: 100vh;
+} */
+
+.miSlider img{
+    width: 100%;
+    flex: 1 0 auto;
+    height: auto;
+    max-height: 100vh;
+    height: inherit;
+    object-fit: cover;
+    vertical-align: top;
+    transition: 2s;
+}
+
+.direcciones{
+    width: 1200px;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: red;
+}
+.direcciones div{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    background: blue;
+}
+.direcciones a{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+.direcciones a:hover{
+    background: rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.barras{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom:15px;
+}
+
+.barra{
+    cursor: pointer;
+    height:2px;
+    width: 25px;
+    margin: 0 2px;
+    background: #dcdde1;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.active{
+    background-color: #e74c3c;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;    
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to{opacity:1;}
+}
+/******** categorias *********/
+
+.categorias{
+    display: flex;
+    position: relative;
+    height: auto;
+    top: 0px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    overflow-x:hidden;
+}
+.categorias div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 0.5rem 1rem;
+    border-radius: 4px;
+    position: relative;
+    background: #F2F2F2;
+    box-shadow: 2px 2px 8px -2px rgba(51, 51, 51, 0.25);
+
+    
+}
+.categorias div a img{
+    width: 32px;
+    margin: 5px;
+}
+
+.categorias div a{
+    width: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+
+}
+.home-mobil{
+    display: none;
+}
+.cupon{
+    display: none;
+}
+
+.cards{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    width: auto;
+    left: 120px;
+    margin: auto;
+    top: 580px;
+    overflow: hidden;
+}
+.cards .cards-items{
+    margin: 0 24px 16px 0;
+    background: white;
+    filter: drop-shadow(0px 2px 8px rgba(51, 51, 51, 0.1));
+    border-radius: 8px;
+}
+
+.cards .cards-items div h3{
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    width: 326px;
+    height: 20px;
+    left: 16px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.cards .cards-items div p{
+    width: 257px;
+    position: relative;
+    left: 16px;
+}
+
+
+}
+@media (min-width: 992px) {
+      
+
+
+}
+
+@media (min-width: 1200px) {
+        /******** header ********/
+.header{
+    position:sticky;
+    box-shadow: var(--shadow);
+    height: var(--header-height);
+}
+.header .navbar{
+    display: flex;
+    flex-direction: row wrap;
+}
+.header ul{
+    display: inherit;
+}
+.header ul  a{
+    margin: 10px 0;
+    display: inherit;
+    text-decoration: none;
+    flex: 0 1 150px;
+}
+.header h2{
+    font-size: 1.1rem;
+}
+
+.header ul img{
+    margin: 0 10px ;
+    object-fit: cover;
+}
+.header .logo{
+    padding: 0 8%;
+    position: relative;
+    left: 10px;
+}
+/***** categorias *****/
+.categorias{
+    display: flex;
+    position: relative;
+    top: 48px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}
+.categorias div{
+    height: 48px;
+}
+
+    
+}
+@media (min-width: 1400px) {}
+
