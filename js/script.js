@@ -37,6 +37,25 @@ function muestraSlides(n){
 
 }
   
+((d) => {
+    const $btnMenu = d.querySelector(".btn-menu"),
+    $menu = d.querySelector(".menu");
+
+    $btnMenu.addEventListener("click", (e) =>{
+        
+        $btnMenu.firstElementChild.classList.toggle("none");
+        $btnMenu.lastElementChild.classList.toggle("none");
+        $menu.classList.toggle("is-dwn")
+
+    })
+
+    d.addEventListener("click", (e)=>{
+        if (!e.target.matches(".menu a")) return false;
+        $menu.classList.remove("is-dwn");
+
+
+    })
+})(document);
 /***********menu *********** */
 ((d) => {
     const $btnMenu = d.querySelector(".menu-btn"),
