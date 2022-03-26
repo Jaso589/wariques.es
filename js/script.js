@@ -1,5 +1,6 @@
 /* ********** Menu ********** */
 
+import hamburgerMenu from "../pruebas/menu.js";
 /******* slide ******** */
 let indice = 1;
 muestraSlides(indice);
@@ -36,6 +37,13 @@ function muestraSlides(n){
     barras[indice-1].className += ' active';
 
 }
+
+
+const d = document;
+d.addEventListener("DOMContentLoaded",(e)=>{
+    hamburgerMenu(".btn-menu",".menu", ".lista-menu a")
+})
+/** */
   
 ((d) => {
     const $btnMenu = d.querySelector(".btn-menu"),
@@ -48,14 +56,17 @@ function muestraSlides(n){
         $menu.classList.toggle("is-dwn")
 
     })
-
+    
     d.addEventListener("click", (e)=>{
         if (!e.target.matches(".menu a")) return false;
         $menu.classList.remove("is-dwn");
 
-
     })
 })(document);
+
+/******* sabores****** */
+
+
 /***********menu *********** */
 ((d) => {
     const $btnMenu = d.querySelector(".menu-btn"),

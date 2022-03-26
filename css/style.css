@@ -95,6 +95,8 @@ a{
 
 /********* site styles ************/
 
+/****** navbar-mobil *********/
+
 .header .navbar{
     display: none;
 }
@@ -134,24 +136,22 @@ a{
     position: relative;
     margin: 0 20px;
 }
+/****slider banner **/
 .slide-contenedor{
     display: none;
 }
-/***menu********/
+/************menu********/
 
 .menu{
     transform: translateY(-100%);
-    z-index: 99;
-    height: 100vh;
-    background: white;
+    z-index: 999;
+    height: 120vh;
+    background:var(--white);
     position: relative;
+    overflow-y: hidden;
 }
-/***** animacion *****/
-.is-dwn{
-    transform: translateY(0%);
-}
+
 .menu .tab-nav{
-    background: white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -160,24 +160,29 @@ a{
     font-size: 1.3rem;
     font-weight: bold;
 }
-.tab-nav div{
+.tab-nav button{
     width: 100%;
     display: flex;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
     height: 100%;
     justify-content: center;
     align-items: center;
 
 }
-.tab-nav div:nth-child(2){
+.tab-nav button:nth-child(2){
     background: #E0E0E0;
 }
 .menu .lista-menu{
     position: relative;
-    width: 183px;
+    background: var(--white);
     height: 290px;
+    transform: translateY(0%);
     top: 47px;
 
 }
+
 .lista-menu li{
     margin-top: 20px;
     display: flex;
@@ -214,12 +219,68 @@ a{
     width: 183.69px;
 
 }
+/***** animacion - menu*****/
+.is-dwn{
+    transform: translateY(0%);
+}
+
+.link-mobil{
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.link-mobil a{
+    margin: 0 22px 0;
+}
+.link-mobil img{
+    width: 66px;
+    height: 66px;
+}
+.lista-sabores{
+    position: absolute;
+    transform: translateY(-200%);
+    background: var(--white);
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    left: 20px;
+    top: 90px;
+}
+.lista-sabores div{
+    width: 77.84px;
+    position: relative;
+    margin:  0 12px 12px 0;
+    height: 106.42px;
+    left: 20px;
+    text-align: center;
+}
+.lista-sabores div a{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+.lista-sabores div img{
+    left: 0%;
+    right: 1.54%;
+    padding: 10px;
+    width: 77px;
+    top: 0%;
+    bottom: 26.44%;
+    border-radius: 4px;
+}
+
+.is-red{
+    background: red;
+}
 
 /*********** home ******/
 .home-mobil{
     top: 90px;
     position: absolute;
-    width: 363px;
+    width: autos;
     height: 56px;
     left: 24px;
 
@@ -246,6 +307,7 @@ a{
     top: 72px;
 
 }
+/****** cupon *********/
 .cupon{
     position: absolute;
     height: 121px;
@@ -254,15 +316,13 @@ a{
     top: 238px;
     display: flex;
     flex-direction: row;
-
-/* segundario */
     background:var(--secondary);
     border-radius: 14px;
 }
 .cupon img{
-width: 90px;
-height: 82px;
-margin: 16px 16px 23px 16px;
+    width: 90px;
+    height: 82px;
+    margin: 16px 16px 23px 16px;
 
 }
 .cupon div{
@@ -290,18 +350,21 @@ margin: 16px 16px 23px 16px;
 .cupon a{
     color: var(--white);
     line-height: 20px;
-/* identical to box height, or 143% */
 
     text-decoration-line: underline;
-
 }
 
 /*********** categorias *************/
+.text-ctg{
+    position: absolute;
+    top: 385px;
+    left: 25px;
+}
 .categorias{
     position: absolute;
     left: 0px;
     top: 421px;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -331,13 +394,47 @@ margin: 16px 16px 23px 16px;
     background: #F2F2F2;
     border-radius: 4px;
 }
+/********cards ***************/
 .cards{
     position: absolute;
-    width: 363px;
-    height: 525px;
-    left: 24px;
+    width: 100%;
+    height: 295px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     top: 546px;
     overflow-y: scroll;
+    
+}
+.cards .cards-items{
+    width: 340px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 24px;
+    height: 292px;
+    background: white;
+    filter: drop-shadow(0px 2px 8px rgba(51, 51, 51, 0.1));
+    border-radius: 8px;
+}
+/********* footer *************/
+footer{
+    width: 100%;
+    overflow: hidden;
+    height: 20px;
+    position: absolute;
+    background: red;
+    top: 100vh;
+}
+footer small{
+    display: none;
+}
+footer p{
+    display: none;
+}
+footer div{
+    display: none;
 }
 @media (min-width: 576px) {
     /******** categorias *********/
@@ -509,14 +606,18 @@ margin: 16px 16px 23px 16px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 8px 16px;
+    padding: 8px 10px;
     overflow-x:hidden;
 }
-.categorias div{
+.text-ctg{
+    display: none;
+}
+.categorias .ctg > div{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px 10px;
+  
+    padding: 0px 5px;
     margin: 0.5rem 1rem;
     border-radius: 4px;
     position: relative;
@@ -525,16 +626,19 @@ margin: 16px 16px 23px 16px;
 
     
 }
-.categorias div a img{
+.categorias .ctg div a img{
+    
     width: 32px;
     margin: 5px;
 }
 
-.categorias div a{
+.categorias .ctg div a{
     width: 100%;
     position: relative;
     align-items: center;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
 .home-mobil{
@@ -543,19 +647,24 @@ margin: 16px 16px 23px 16px;
 .cupon{
     display: none;
 }
-
+/***********cards ***********/
 .cards{
     display: flex;
     position: absolute;
+    flex-direction: row;
+    height: 100%;
     flex-wrap: wrap;
-    width: auto;
-    left: 120px;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
     margin: auto;
     top: 580px;
-    overflow: hidden;
 }
 .cards .cards-items{
-    margin: 0 24px 16px 0;
+    margin: 0 24px;
+    
+    height: 292px;
+    width: 363px;
     background: white;
     filter: drop-shadow(0px 2px 8px rgba(51, 51, 51, 0.1));
     border-radius: 8px;
@@ -579,6 +688,20 @@ margin: 16px 16px 23px 16px;
     position: relative;
     left: 16px;
 }
+
+/*********** footer *************/
+footer{
+    position: absolute;
+    bottom: -100vh;
+    height: 125px;
+    display: flex;
+    left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background: #EEEEEE;
+}
+
 
 
 }
