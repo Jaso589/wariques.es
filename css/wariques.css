@@ -1,0 +1,588 @@
+:root{
+    --principal: #434343;
+    --complementary: #808080;
+    --white: #F9F9F9;
+    
+    --black: #3D4E54;
+    --orange: #E9672B;
+    --secondary: #B11F2D;
+    --yellow: #F2C94C;
+    --gray: #AEAEAE;
+    --font: sans-senrif;
+    --max-width:1200px;
+    --header-height:4rem;
+    --height-mobil:3.8rem;
+    --shadow: 0 -1px 5px #434343;
+}
+
+/********* Reset ************/
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    color:var(--black);
+    background: var(--white);
+}
+a{
+    color: var(--black);
+    transition: all 0.5s ease-out;
+}
+a:hover{
+    opacity: 0.75;
+}
+
+h1{
+    margin: 0;
+    font-size: 1.5rem;
+}
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+h5 {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  
+h6 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+img{
+    max-width: 100%;
+    height: auto;
+}
+li{
+    list-style: none;
+}
+p{
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+}
+/****** navbar **********/
+.navbar{
+    display: none;
+}
+/******nav mobil*************/
+
+.nav-mobil{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--height-mobil);
+    box-shadow: var(--shadow);
+}
+.nav-mobil .logo-menu{
+    width: 35%;
+    height: inherit;
+}
+.nav-mobil button{
+    background: none;
+    border: none;
+}
+.nav-mobil button img{
+    width: 44px;
+}
+.nav-mobil div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+.nav-mobil div a{
+    margin: 0 5px 0 0;
+}
+/******* menu **************/
+.menu{
+    height: 100vh;
+    position: absolute;
+    background: var(--white);
+    z-index: 999;
+    transform: translateY(-100%);
+}
+.tab-nav{
+    position: relative;
+    display: flex;
+    background: var(--white);
+    height: var(--height-mobil);
+}
+.tab-nav button{
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 20px;color: var(--principal);
+}
+.tab-nav button:nth-child(2){
+    background:var(--white-opaco);
+}
+/******* menu lista *********/
+.lista-menu{
+    background:var(--white);
+    height: 70vh;
+    position: relative;
+    top: -18px;
+}
+.lista-menu ul{
+    width: 224px;
+    height: 316px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 54px;
+}
+.wsp{
+    width: 330px;
+    height: 88.95px;
+    margin: auto;
+    color: white;
+    display: flex;
+    background: #000000;
+    border-radius: 14px;
+    align-items: center;
+}
+.wsp img{
+    width: 43px;
+    height: 43px;
+    position: relative;
+    margin: 0 16px 0 16px;
+}
+
+.wsp .text-wsp{
+    position: relative;
+    width: 183.69px;
+}
+.link-mobil{
+    display: flex;
+    padding: 5px;
+    margin: 40px 0;
+    justify-content: center;
+}
+.link-mobil a{
+    margin: 0 32px;
+}
+
+.menu-sabores{
+    display: none;
+
+}
+
+/***********home ***************/
+.slide-contenedor{
+    display: none;
+}
+.home{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 90px;
+    flex-wrap: wrap;
+    height: 360px;
+    width: 100%;
+}
+.buscador{
+    margin: 0 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+.buscador input{
+    width: 100%;
+    height: 52px;
+    margin-top: 16px;
+    border: 0.5px solid #3D4E54;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.cupon{
+    width: 100%;
+
+}
+.card-cupon{
+    height: 121px;
+    width: 88%;
+    margin: 24px auto;
+    background:var(--secondary);
+    border-radius: 14px;
+    display: flex;
+}
+.card-cupon img{
+    width: 90px;
+    height: 82px;
+    margin: 16px 17px 23px 16px;
+}
+.card-cupon div{
+    color: white;
+    width: 227px;
+    height: 96.02px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 10px;
+}
+.card-cupon div h3{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 10px 0;
+}
+
+.card-cupon div a{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 9px;
+/* identical to box height, or 143% */
+    text-decoration-line: underline;
+    color: var(--white);
+}
+/******** categorias ******/
+.categoria{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    height: 139px;
+    margin: 0 0 0 24px;
+}
+.ctg{
+    position: relative;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+}
+.ctg div{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 10px;
+    
+}
+.ctg div a{
+    width: 77.47px;
+    margin: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.ctg div img{
+    position: relative;
+    width: 77.47px;
+    right: 1.54%;
+    top: 0%;
+    padding: 5px;
+    bottom: 26.44%;
+    background: #F2F2F2;
+    border-radius: 4px;
+}
+.is-active{
+    transform: translateY(0%);
+}
+/********** cards ************/
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+    height: 320px;
+    align-items: center;
+    overflow-y: scroll;
+}
+.cards .cards-items{
+    left: 0%;
+    right: 0%;
+    top: 180px;
+    margin: 5px 0 5px 0;
+    border-radius: 8px;
+    background: #FFFFFF;
+}
+.cards-items div{
+    margin: 0 0 0 16px;
+}
+/****** footer *************/
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer small, footer p {
+    opacity: 0;
+}
+footer button{
+    border-radius: 50%;
+    border: none;
+    width: 48px;
+    background: var(--orange);
+    margin: 10px;
+    height: 48px;
+    position: relative;
+}
+@media (min-width: 768px) {
+    /*******navbar header ******/
+    .nav-mobil{
+        display: none;
+    }
+    .buscador, .cupon{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        position:sticky;
+        box-shadow: var(--shadow);
+        width: 100%;
+        align-items: center;
+        height: var(--header-height);
+        
+    }
+    .navbar ul{
+        display: inherit;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .navbar ul a{
+        margin: auto;
+        flex: 0 1 auto;
+        text-decoration: none;
+        text-align: center;
+        
+    }
+    .navbar ul a h2{ 
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .navbar ul img{
+        height: 30px;
+        object-fit: cover;
+    }
+    .navbar .logo{
+        padding: 0 5%;
+        position: relative;
+        margin: auto;
+        left: 20px;
+    }
+    .home{
+        position: relative;
+        top: 0;
+    }
+    /******* slide ***********/
+    .slide-contenedor{
+        position:relative;
+        width: 100%;
+        top: 40px;
+        height: 304px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        /* margin: auto; */
+    }
+    
+    /* .miSlider{
+        display: none;
+        transition: 2s;
+        max-height: 100vh;
+    } */
+
+    .miSlider img{
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        height: inherit;
+        object-fit: cover;
+        vertical-align: top;
+        transition: 2s;
+    }
+    
+    .direcciones{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+    
+    .direcciones a{
+        color: #fff;
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+    }
+    
+    .direcciones a:hover{
+        background: rgba(0, 0, 0, .5);
+        transition: .5s;
+    }
+    
+    .barras{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom:15px;
+    }
+    
+    .barra{
+        cursor: pointer;
+        height:2px;
+        width: 25px;
+        margin: 0 2px;
+        background: #dcdde1;
+        display: inline-block;
+        margin-left: 3px;
+    }
+    
+    .active{
+        background-color: #e74c3c;
+    }
+    
+    .fade{
+        animation-name: fade;
+        animation-duration: 1.5s;    
+    }
+    
+    @keyframes fade {
+        from {opacity: .4;}
+        to{opacity:1;}
+    }
+    /***** categorias *************/
+    .categoria h2{
+        display: none;
+    }
+    .categoria{
+        position: relative;
+        height: 60px;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+    }
+    .categoria .ctg{
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+    .ctg div{
+        display: flex;
+        flex-direction: row;
+        height: 48px;
+        left: 0px;
+        top: 0px;
+        padding: 5px;
+        background: #F2F2F2;
+        box-shadow: 2px 2px 8px -2px rgba(51, 51, 51, 0.25);
+        border-radius: 4px;
+    }
+    .ctg div a{
+        display: flex;
+        width: auto;
+        align-items: center;
+        flex-direction: row;
+    }
+    .ctg div img{
+        width: 32px;
+        height: 32px;
+    }
+    /*******cards ***********/
+    .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .cards .cards-items{
+        margin: 0 24px 18px 0;
+    }
+    footer{
+        width: 100%;
+        overflow: hidden;
+    }
+    footer small, footer p {
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    /*******navbar header ******/
+    
+    .navbar{
+        display: flex;
+        position:sticky;
+        box-shadow: var(--shadow);
+        width: 100%;
+        height: var(--header-height);
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar .logo{
+        height: inherit;
+        position: relative;
+        padding: 20px;
+    }
+    .navbar ul{
+        width: auto;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .navbar ul a{
+        display: flex;
+        height: 100%;
+        width: 150px;
+        align-items: center;
+    }
+    .navbar ul a h2{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 24px 0 0;
+    }
+    .navbar ul a img{
+        height: 40px;
+        padding: 5px;
+        margin: 0 10px 0 0;
+        object-fit: cover;
+    }
+  
+}
