@@ -44,7 +44,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     hamburgerMenu(".btn-menu",".menu", ".lista-menu a")
 })
 /** */
-  
+/*
 ((d) => {
     const $btnMenu = d.querySelector(".btn-menu"),
     $menu = d.querySelector(".menu");
@@ -68,6 +68,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
 
 
 /***********menu *********** */
+/*
 ((d) => {
     const $btnMenu = d.querySelector(".menu-btn"),
       $menu = d.querySelector(".menu"),
@@ -90,4 +91,4 @@ d.addEventListener("DOMContentLoaded",(e)=>{
       $menuText.classList.remove("is-active");
     });
   })(document);
-
+*/
